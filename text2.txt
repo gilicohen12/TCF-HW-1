@@ -1,0 +1,127 @@
+Last login: Fri Oct 28 11:11:38 on ttys000
+
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+MacBook-Air-84:~ gili$ cd Got-TCF
+-bash: cd: Got-TCF: No such file or directory
+MacBook-Air-84:~ gili$ cd Git-TCF
+-bash: cd: Git-TCF: No such file or directory
+MacBook-Air-84:~ gili$ cd desktop/Git-TCF
+MacBook-Air-84:Git-TCF gili$ init
+-bash: init: command not found
+MacBook-Air-84:Git-TCF gili$ git init
+Initialized empty Git repository in /Users/gili/Desktop/Git-TCF/.git/
+MacBook-Air-84:Git-TCF gili$ git config init.default branch main
+MacBook-Air-84:Git-TCF gili$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+
+nothing added to commit but untracked files present (use "git add" to track)
+MacBook-Air-84:Git-TCF gili$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	text1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+MacBook-Air-84:Git-TCF gili$ git branch Branch2
+fatal: not a valid object name: 'main'
+MacBook-Air-84:Git-TCF gili$ git commit -m "First commit" 
+On branch main
+
+Initial commit
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	text1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+MacBook-Air-84:Git-TCF gili$ git branch
+MacBook-Air-84:Git-TCF gili$ git init
+Reinitialized existing Git repository in /Users/gili/Desktop/Git-TCF/.git/
+MacBook-Air-84:Git-TCF gili$ git branch Branch2
+fatal: not a valid object name: 'main'
+MacBook-Air-84:Git-TCF gili$ git add text1.txt
+MacBook-Air-84:Git-TCF gili$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   text1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+
+MacBook-Air-84:Git-TCF gili$ git commit -m "first commit"
+[main (root-commit) 505b8c9] first commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 text1.txt
+MacBook-Air-84:Git-TCF gili$ git branch
+* main
+MacBook-Air-84:Git-TCF gili$ git branch Branch2
+MacBook-Air-84:Git-TCF gili$ git branch
+  Branch2
+* main
+MacBook-Air-84:Git-TCF gili$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   text1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	text2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+MacBook-Air-84:Git-TCF gili$ git commit -a -m "changed text1 in main"
+[main 6933cf6] changed text1 in main
+ 1 file changed, 1 insertion(+)
+MacBook-Air-84:Git-TCF gili$ switch Branch2
+-bash: switch: command not found
+MacBook-Air-84:Git-TCF gili$ git switch Branch2
+Switched to branch 'Branch2'
+MacBook-Air-84:Git-TCF gili$ git status
+On branch Branch2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   text1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	text2.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+MacBook-Air-84:Git-TCF gili$ git commit -a -m "changed text 1 in Branch2"
+[Branch2 1c2308b] changed text 1 in Branch2
+ 1 file changed, 1 insertion(+)
+MacBook-Air-84:Git-TCF gili$ git switch main
+Switched to branch 'main'
+MacBook-Air-84:Git-TCF gili$ git commit -a -m "added commands to text2 in main"
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.DS_Store
+	text2.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+MacBook-Air-84:Git-TCF gili$ add text2.txt
+-bash: add: command not found
+MacBook-Air-84:Git-TCF gili$ git add text2.txt
